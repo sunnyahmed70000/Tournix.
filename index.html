@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournix - User Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Tournix</h1>
+    <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
+  </header>
+
+  <div class="balance-box">
+    <h2>Main Balance: <span id="balance">৳0</span></h2>
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+  </div>
+
+  <div class="game-list">
+    <h2>Game List</h2>
+    <button onclick="showFreeFire()">Free Fire</button>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Match Schedule</h2>
+      <p id="countdown">Starting soon...</p>
+      <h3>Leaderboard</h3>
+      <p>No data yet</p>
+    </div>
+  </div>
+
+  <div id="menu" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeMenu()">&times;</span>
+      <h2>Menu</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
