@@ -3,22 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Tournix - Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Admin Dashboard</h1>
-    <button onclick="logout()">Logout</button>
-  </header>
+<body class="admin-body">
 
-  <div class="dashboard">
-    <h2>User Requests</h2>
-    <ul id="requests">
-      <li>No requests yet</li>
+  <div class="sidebar">
+    <h2 class="logo">Tournix</h2>
+    <ul>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Matches</a></li>
+      <li><a href="#">Transactions</a></li>
+      <li><a href="admin.html">Logout</a></li>
     </ul>
   </div>
 
-  <script src="script.js"></script>
+  <div class="main-content">
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+
+    <section class="content">
+      <h2>Welcome, Admin 👋</h2>
+      <p>Here you can manage tournaments, users, and transactions.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p>120</p>
+        </div>
+        <div class="card">
+          <h3>Active Matches</h3>
+          <p>5</p>
+        </div>
+        <div class="card">
+          <h3>Transactions</h3>
+          <p>BDT 12,000</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
 </body>
 </html>
