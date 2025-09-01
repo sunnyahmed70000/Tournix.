@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
+  <title>Tournix - Admin Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="login-body">
+
   <div class="login-box">
-    <h1>Admin Login</h1>
-    <input type="text" id="adminUser" placeholder="Username">
-    <input type="password" id="adminPass" placeholder="Password">
-    <button onclick="adminLogin()">Login</button>
-    <p id="error" class="error"></p>
+    <h1 class="logo">Tournix</h1>
+    <h2>Admin Login</h2>
+
+    <form onsubmit="return checkLogin(event)">
+      <input type="text" id="username" placeholder="Admin Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function checkLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if(user === "admin" && pass === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid Username or Password!");
+      }
+    }
+  </script>
 </body>
 </html>
